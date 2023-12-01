@@ -49,10 +49,36 @@ export default function header() {
             />
           </div>
           <div className="lg:hidden block mt-6">
-            {/* menu buat responsive */}
             <button onClick={toggleMenus}>
               <Icon icon="solar:hamburger-menu-outline" />
             </button>
+          </div>
+          <div
+            className={`menu mt-6 lg:auto h-screen lg:w-auto w-full 
+            ${toggleMenu ? "block" : "lg:block hidden"}`}
+          >
+            <ul className="lg:flex block gap-8 justify-start text-sm">
+              {menus.map((item, index) => (
+                <li className="menu-item">
+                  <a
+                    href=""
+                    key={index}
+                    className={item.active ? "active-menu" : ""}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="contact mt-4 lg:block hidden">
+            <div className="flex gap-5">
+              <button className="btn font-bold">Masuk</button>
+              <button className="btn-light text-btn-grey text-primary font-bold">
+                Daftar
+              </button>
+            </div>
           </div>
         </div>
       </header>
