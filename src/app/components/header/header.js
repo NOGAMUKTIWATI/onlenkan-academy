@@ -1,6 +1,6 @@
 "use client";
+
 import { useState } from "react";
-import { Icon } from "@iconify/react";
 
 const menus = [
   {
@@ -9,28 +9,33 @@ const menus = [
     active: true,
   },
   {
-    title: "Kelas",
+    title: "Tentang Kami",
     href: "/",
     active: false,
   },
   {
-    title: "Event",
+    title: "Layanan",
     href: "/",
     active: false,
   },
   {
-    title: "Source Code",
+    title: "Portfolio",
     href: "/",
     active: false,
   },
   {
-    title: "Artikel",
+    title: "Academy",
+    href: "/",
+    active: false,
+  },
+  {
+    title: "Blog",
     href: "/",
     active: false,
   },
 ];
 
-export default function header() {
+export default function navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
 
   const toggleMenus = () => {
@@ -45,17 +50,15 @@ export default function header() {
             <div className="logo-brand">
               <img
                 src="./images/logo/logo.png"
-                alt="Logo Onlenkan Gan"
+                alt=""
                 className="w-32"
               />
             </div>
             <div
-              className={`menu mt-6 lg:auto h-screen lg:w-auto w-full 
-              ${
-                toggleMenu ? "block" : "lg:block hidden"
-              }`}
+              className={`menu mt-6 lg:h-auto h-screen lg:w-auto w-full  ml-5
+            ${toggleMenu ? "block" : "lg:block hidden"}`}
             >
-              <ul className="lg:flex block gap-8 justify-start text-gray-400">
+              <ul className="lg:flex block gap-5 mt-1 justify-center text-gray-500 text-sm">
                 {menus.map((item, index) => (
                   <li className="menu-item">
                     <a
@@ -73,17 +76,26 @@ export default function header() {
 
           <div className="lg:hidden block mt-6">
             <button onClick={toggleMenus}>
-              <Icon icon="solar:hamburger-menu-outline" />
+              <svg
+                className="mr-5"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75ZM0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8Zm.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H.75Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </button>
           </div>
 
-          <div className="contact mt-4 lg:block hidden">
-            <div className="flex gap-5">
-              <button className="btn font-bold">Masuk</button>
-              <button className="btn-light text-btn-grey text-primary font-bold">
-                Daftar
-              </button>
-            </div>
+          <div className="contact mt-4  space-x-4 lg:block hidden">
+            <button className="btn font-bold">Masuk</button>
+            <button className="btn-light font-bold">Daftar</button>
           </div>
         </div>
       </header>
