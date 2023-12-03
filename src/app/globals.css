@@ -1,19 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* font poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Quicksand:wght@500;700&display=swap");
 
 @layer base {
   .btn {
     @apply bg-primary px-5 rounded-md py-2  text-white text-sm;
   }
   .btn-light {
-    @apply bg-primary/5 px-5 rounded-md py-2  border-2 border-primary text-sm;
+    @apply bg-primary/0 px-5 rounded-md py-2  border-2 border-primary text-sm;
   }
   .active-menu {
-    @apply text-primary font-bold;
+    @apply text-primary;
   }
 }
 
+/* buat warna saat text yang di blok */
 ::selection {
   background-color: #3b55c3;
   color: white;
