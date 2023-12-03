@@ -9,27 +9,22 @@ const menus = [
     active: true,
   },
   {
-    title: "Tentang Kami",
+    title: "Kelas",
     href: "/",
     active: false,
   },
   {
-    title: "Layanan",
+    title: "Event",
     href: "/",
     active: false,
   },
   {
-    title: "Portfolio",
+    title: "Source Code",
     href: "/",
     active: false,
   },
   {
-    title: "Academy",
-    href: "/",
-    active: false,
-  },
-  {
-    title: "Blog",
+    title: "Article",
     href: "/",
     active: false,
   },
@@ -48,11 +43,7 @@ export default function navbar() {
         <div className="flex gap-5 justify-between">
           <div className="flex gap-5">
             <div className="logo-brand">
-              <img
-                src="./images/logo/logo.png"
-                alt=""
-                className="w-32"
-              />
+              <img src="./images/logo/logo.png" alt="" className="w-32" />
             </div>
             <div
               className={`menu mt-6 lg:h-auto h-screen lg:w-auto w-full  ml-5
