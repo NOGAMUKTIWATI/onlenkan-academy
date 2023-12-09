@@ -39,13 +39,12 @@ export default function WhyChooseUs() {
       <div className="container mx-auto lg:max-w-6xl max-w-full mt-20">
         <div className="our-value text-center space-y-3">
           <p className="text-primary uppercase font-bold">Our Value</p>
-          <h1 className="text-3xl font-bold">Kenapa Memilih Kami?</h1>
-          <p className="text-sm text-gray-400">
-            Akan Ada Banyak Sekali Benefit Yang Akan Kamu Dapatkan Ketika
-            <br />
-            Kamu Mendaftar Menjadi Member Kami, Contoh Besarnya Seperti
-            <br />
-            Berikut:
+          <h1 className="text-3xl font-bold tracking-tighter">
+            Kenapa Memilih Kami?
+          </h1>
+          <p className="text-sm text-gray-400 max-w-3xl mx-auto">
+            Akan Ada Banyak Sekali Benefit Yang Akan Kamu Dapatkan Ketika Kamu
+            Mendaftar Menjadi Member Kami, Contoh Besarnya Seperti Berikut:
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 py-14">

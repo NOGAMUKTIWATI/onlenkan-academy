@@ -70,8 +70,11 @@ export default function footer() {
           </div>
         </div>
       </div>
-      <div className="flex bg-theme-footer justify-center  border-t p-5">
-        <p className="text-white font-semibold text-sm">
+      <div className="grid grid-cols-1 gap-2 bg-theme-footer text-center justify-center  border-t p-5">
+        <p className="text-white font-medium text-sm">
+          Build using Next js and Tailwind CSS
+        </p>
+        <p className="text-neutral-300 font-semibold text-sm">
           Copyright &copy; 2023 Noga Muktiwati. All Rights Reserved
         </p>
       </div>
