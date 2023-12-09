@@ -72,7 +72,7 @@ export default function footer() {
       </div>
       <div className="flex bg-theme-footer justify-center  border-t p-5">
         <p className="text-white font-semibold text-sm">
-          Copyright &copy; 2023 Noga Muktiwati. All Rights Reserved
+          Copyright &copy; 2023 Nogan. All Rights Reserved
         </p>
       </div>
     </div>
