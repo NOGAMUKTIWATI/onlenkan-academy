@@ -1,5 +1,5 @@
 "use client";
-
+import { Icon } from "@iconify/react";
 import { useState } from "react";
 
 const menus = [
@@ -43,18 +43,24 @@ export default function navbar() {
         <div className="flex gap-5 justify-between">
           <div className="flex gap-5">
             <div className="logo-brand">
-              <img src="./images/logo/logo.png" alt="" className="w-32" />
+              <img
+                src="./images/logo/logo.png"
+                alt=""
+                className="w-32"
+              />
             </div>
             <div
               className={`menu mt-6 lg:h-auto h-screen lg:w-auto w-full  ml-5
             ${toggleMenu ? "block" : "lg:block hidden"}`}
             >
-              <ul className="lg:flex block gap-5 mt-1 justify-center text-gray-500 text-sm">
+              <ul className="lg:flex block gap-5 justify-center text-gray-500 text-sm">
                 {menus.map((item, index) => (
-                  <li className="menu-item">
+                  <li
+                    className="menu-item"
+                    key={index}
+                  >
                     <a
-                      href=""
-                      key={index}
+                      href={item.href}
                       className={item.active ? "active-menu" : ""}
                     >
                       {item.title}
@@ -67,20 +73,10 @@ export default function navbar() {
 
           <div className="lg:hidden block mt-6">
             <button onClick={toggleMenus}>
-              <svg
-                className="mr-5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill="currentColor"
-                  fill-rule="evenodd"
-                  d="M0 3.75A.75.75 0 0 1 .75 3h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 3.75ZM0 8a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H.75A.75.75 0 0 1 0 8Zm.75 3.5a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <Icon
+                icon="radix-icons:hamburger-menu"
+                className="text-2xl mr-3"
+              />
             </button>
           </div>
 

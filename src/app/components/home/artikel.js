@@ -32,23 +32,20 @@ const items = [
     title: "Dasar - Dasar HTTP dan HTTPS",
     description: "Kenali Perbedaan HTTP dan HTTPS dengan Lengkap",
     avatar: "./images/kelas/avatar.png",
-    name: "Mohammad Sahrullah",
+    name: "Muhammad Yunus",
     tanggal: "06 Dec 2023",
   },
 ];
 export default function artikel() {
   return (
     <div className="kelas p-5 mt-20">
-      <div className="head-artikel">
-        <h1 className="text-3xl text-center font-bold items-center max-w-auto mx-auto">
+      <div className="head-artikel space-y-3">
+        <h1 className="text-3xl text-center font-bold items-center max-w-auto mx-auto tracking-tighter">
           Artikel Terakhir
         </h1>
-        <p className="text-sm text-center text-gray-400 items-center max-w-auto mx-auto">
-          Jika Kamu mempunyai waktu yang singkat, dan ingin dimanfaatkan,
-          <br />
-          kami telah menyediakan Kamu beberapa artikel
-          <br />
-          yang mungkin bermanfaat.
+        <p className="text-sm text-center text-gray-400 items-center max-w-2xl  mx-auto">
+          Jika Kamu mempunyai waktu yang singkat, dan ingin dimanfaatkan, kami
+          telah menyediakan Kamu beberapa artikel yang mungkin bermanfaat.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 py-14">
