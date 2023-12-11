@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/app/components/home/kelas/card";
+import Card from "@/app/_components/home/kelas/card";
 
 const items = [
   {
@@ -38,7 +38,8 @@ const items = [
     id: 5,
     image: "./images/kelas/card-5.jpg",
     category: "Full Stack Web Developer",
-    title: "Full-Stack Web Developer | Belajar Dari 0 Hingga Mahir - Laravel Pride",
+    title:
+      "Full-Stack Web Developer | Belajar Dari 0 Hingga Mahir - Laravel Pride",
     price: "Rp. 350,000",
   },
 ];

@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Hero() {
   return (
     <div className="lg:mt-10 mt-40 p-5 max-w-4xl space-y-5">
@@ -10,7 +11,9 @@ export default function Hero() {
         Bersama Programmer Hebat Lainnya.
       </p>
       <div className="space-x-4">
-        <button className="btn btn-primary">Dashboard Saya</button>
+        <Link href="/dashboard">
+          <button className="btn btn-primary">Dashboard Saya</button>
+        </Link>
         <button className="btn-secondary">Lihat List Kelas</button>
       </div>
     </div>

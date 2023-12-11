@@ -1,3 +1,4 @@
+"use client";
 import { Icon } from "@iconify/react";
 export default function card({ icon, title, description }) {
   return (

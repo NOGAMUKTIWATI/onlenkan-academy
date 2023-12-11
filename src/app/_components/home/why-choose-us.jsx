@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/app/components/home/why-choose-us/card";
+import Card from "@/app/_components/home/why-choose-us/card";
 
 const items = [
   {

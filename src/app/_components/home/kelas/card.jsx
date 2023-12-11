@@ -1,3 +1,4 @@
+"use client";
 export default function card({ image, category, title, price, discount }) {
   return (
     <div className="card border transform translate-y-0 hover:-translate-y-2 transition-all  h-auto rounded-md bg-white space-y-3">

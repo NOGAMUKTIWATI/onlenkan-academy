@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "@/app/components/home/artikel/card";
+import Card from "@/app/_components/home/artikel/card";
 
 const items = [
   {
