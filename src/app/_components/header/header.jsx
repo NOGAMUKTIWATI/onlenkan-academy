@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import Link from "next/link";
 
 const menus = [
   {
@@ -60,12 +61,12 @@ export default function navbar() {
                     className="menu-item"
                     key={index}
                   >
-                    <a
+                    <Link
                       href={item.href}
                       className={item.active ? "active-menu" : ""}
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

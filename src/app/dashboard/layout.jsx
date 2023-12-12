@@ -1,10 +1,6 @@
 "use client";
-import Header from "./_components/header/header";
+import Navbar from "./_components/navbar";
+
 export default function DashboardLayout({ children }) {
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
