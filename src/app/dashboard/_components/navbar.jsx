@@ -20,8 +20,6 @@ export default function navbar() {
         icon: "bi:display",
         href: "/dashboard/informasi",
       },
-     
-    
       {
         name: "Source Code",
         icon: "akar-icons:briefcase",
@@ -36,9 +34,11 @@ export default function navbar() {
   return (
     <div className="p-2 border-b  top-0 ">
       <div className="flex justify-between">
-        <div className="logo-brand">
+        {/* logo */}
+        <div className="logo-brand pl-5">
           <img src="./images/logo/logo.png" alt="logo-brand" className="w-32" />
         </div>
+        {/* menu */}
         <div className="menu mt-5 ">
           <ul className="flex gap-5">
             {menus.map((item, index) => (
@@ -49,19 +49,18 @@ export default function navbar() {
           </ul>
         </div>
 
-        <div className="notif gap-5 a">
+        <div className="profile flex pr-5 gap-5  max-w-[300px]">
           
-          <Icon icon="akar-icons:bell" />
-        </div>
-
-        <div className="avatar flex gap-5 justify-between">
+          <Icon className="mt-5 text-2xl" icon="akar-icons:bell" />
           <img
             src="./images/kelas/avatar.png"
             alt="avatar"
-            className="mt-5 mr-8 w-10 h-10 rounded-full"
+            className="mt-3 rounded-full w-10 h-10"
           />
-          <p className="text-sm text-gray-400 inline-block">Muhammad Yunus</p>
+          <p className="mt-6 text-sm text-gray-400">Muhammad Yunus</p>
         </div>
+
+        
       </div>
     </div>
   );

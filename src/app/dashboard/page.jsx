@@ -1,3 +1,5 @@
+import Content from "./_components/content";
+
 export const metadata = {
   title: "Dashboard | Onlenkan.com - Academy",
   description: "Create business website with Onlenkan.com for your business",
@@ -5,8 +7,10 @@ export const metadata = {
 
 export default function dashboard() {
   return (
-    <div className="p-5 text-center h-screen">
-      <h2 className="font-bold text-5xl">💓 💓 Content💓 💓</h2>
+    <div className="p-5 text-center  bg-biru-muda">
+      <div className="content">
+        <Content />
+      </div>
     </div>
   );
 }

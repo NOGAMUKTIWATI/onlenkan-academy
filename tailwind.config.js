@@ -17,6 +17,7 @@ module.exports = {
         "btn-grey": "#F8F9FA",
         "theme-footer": "#011C39",
         "why-choose-us": "#ECEFFC",
+        "biru-muda": "#ECEFFC",
       },
     },
     plugins: [],

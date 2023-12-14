@@ -6,13 +6,13 @@ export default function link({href, name, icon}) {
     <div>
       <Link href={href}>
         <div className="flex gap-2">
-          <Icon icon={icon} />
+          <Icon className="mt-1" icon={icon} />
           <span>
             {name}
           </span>
-
         </div>
       </Link>
     </div>
   );
 }
+

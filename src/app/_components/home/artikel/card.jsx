@@ -28,6 +28,7 @@ export default function card({
           <p className="max-w-lg text-sm text-gray-500">{description}</p>
         </div>
       </div>
+      
       <div className="flex gap-5 card-profile w-full  p-5">
         <img
           src={avatar}
