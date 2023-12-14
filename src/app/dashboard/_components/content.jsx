@@ -35,9 +35,9 @@ const itemsKelas = [
     id: 1,
     image: "././images/kelas/card-5.jpg",
     badge: "Aktif",
-    color: "green",
     category: "Full-Stack Web Developer",
-    title: "Full-Stack Web Developer | Belajar Dari 0 Hingga Mahir - Laravel Pride",
+    title:
+      "Full-Stack Web Developer | Belajar Dari 0 Hingga Mahir - Laravel Pride",
     progress: "Progress Belajar",
     description: ": Membuat Homepage Part 1",
   },
@@ -45,13 +45,11 @@ const itemsKelas = [
     id: 2,
     image: "././images/kelas/card-2.jpg",
     badge: "Tidak Aktif",
-    color: "red",
     category: "Front-End Web Developer",
     title: "Mastering HTML CSS",
     progress: "Progress Belajar",
     description: ": Background",
   },
- 
 ];
 
 export default function content() {
@@ -83,7 +81,6 @@ export default function content() {
             key={index}
             image={item.image}
             badge={item.badge}
-            color={item.color}
             category={item.category}
             title={item.title}
             progress={item.progress}

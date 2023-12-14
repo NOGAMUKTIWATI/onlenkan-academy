@@ -1,10 +1,19 @@
 "use client";
-export default function card({ image, badge, color, category, title, progress, description }) {
+export default function card({
+  image,
+  badge,
+  category,
+  title,
+  progress,
+  description,
+}) {
+  const color = badge.toLowerCase() === "aktif" ? "bg-green-500" : "bg-red-500";
+
   return (
     <div className="card border flex flex-col transform translate-y-0 hover:-translate-y-2 transition-all  h-auto rounded-md bg-white">
       <div className="image-cover relative">
         <span
-          className={`bg-${color}-500 px-4 py-1 absolute top-5 right-5 rounded text-white font-bold`}
+          className={`${color} px-4 py-1 absolute top-5 right-5 rounded text-white font-bold`}
         >
           {badge}
         </span>
