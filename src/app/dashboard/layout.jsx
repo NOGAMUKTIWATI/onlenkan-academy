@@ -5,7 +5,7 @@ export default function DashboardLayout({ children }) {
   return (
     <div>
       <Navbar />
-      <div className="bg-biru-muda">{children}</div>
+      <div className="lg:h-screen bg-biru-muda">{children}</div>
     </div>
   );
 }

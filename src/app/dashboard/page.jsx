@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function dashboard() {
   return (
-    <div className="p-5 text-center  bg-biru-muda">
+    <div className="p-5 text-center">
       <div className="content">
         <Content />
       </div>
