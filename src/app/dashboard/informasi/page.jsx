@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "use client";
 
 import React from "react";
@@ -49,6 +50,21 @@ export default function page() {
           </tr>
         </tbody>
       </table>
+=======
+import React from 'react'
+import Cardinfo from "./cardinfo";
+
+
+export default function page() {
+  return (
+    <div className="p-5 text-center">
+      <div className="informasi">
+        <h2 className="font-bold pl-3 text-start text-2xl py-5">
+          Informasi Terkini
+        </h2>
+        <Cardinfo/>
+      </div>
+>>>>>>> 8f703a98c9c69177f5f9fc882492f4946f36a0df
     </div>
   );
 }
