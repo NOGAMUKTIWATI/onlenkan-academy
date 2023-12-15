@@ -22,6 +22,21 @@
   .active-menu {
     @apply text-primary;
   }
+  .table {
+    @apply w-full p-5;
+  }
+  table {
+    @apply w-full;
+  }
+  .table thead {
+    @apply bg-white rounded-[8px];
+  }
+  .table th {
+    @apply p-2 text-left text-gray-600 bg-white;
+  }
+  .table td {
+    @apply p-2;
+  }
 }
 
 /* buat warna saat text yang di blok */
