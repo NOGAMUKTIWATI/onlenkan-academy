@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Link from "./navbar/link";
+import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 
 export default function navbar() {
@@ -54,6 +57,7 @@ export default function navbar() {
                   key={index}
                 >
                   <Link
+                    // className={isActive ? "text-primary" : "text-gray-500"}
                     href={item.href}
                     name={item.name}
                     icon={item.icon}
