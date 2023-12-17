@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "../admin/_components/navbar/link";
+import Link from "./navbar/link";
 import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 

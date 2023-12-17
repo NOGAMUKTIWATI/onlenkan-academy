@@ -1,3 +1,5 @@
+import { Icon } from "@iconify/react";
+
 export default function informasi({ thead, td }) {
   return (
     <div className="p-5 w-full rounded-md">
@@ -10,10 +12,10 @@ export default function informasi({ thead, td }) {
         <div className="w-full space-y-5">
           {td.map((item, index) => (
             <div
-              className="bg-white rounded-md grid p-4 gap-5 grid-cols-3"
+              className="bg-white rounded-md grid p-3 gap-5 grid-cols-3"
               key={index}
             >
-              <h2>{item.no}</h2>
+              <Icon icon={item.icon} />
               <h2>{item.tanggal}</h2>
               <div className="space-y-4">
                 <h2 className="uppercase font-bold text-black">
