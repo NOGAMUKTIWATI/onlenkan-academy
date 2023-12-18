@@ -7,7 +7,10 @@ import { usePathname } from "next/navigation";
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
-  const showLandingComponent = pathname.startsWith("/dashboard") ? false : true;
+  const showLandingComponent =
+    pathname.startsWith("/member") || pathname.startsWith("/admin")
+      ? false
+      : true;
 
   return (
     <html

@@ -1,7 +1,7 @@
 import Content from "./_components/content";
 
 export const metadata = {
-  title: "Dashboard | Onlenkan.com - Academy",
+  title: "Dashboard | Member",
   description: "Create business website with Onlenkan.com for your business",
 };
 

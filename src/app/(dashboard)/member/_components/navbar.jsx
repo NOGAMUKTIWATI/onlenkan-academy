@@ -4,33 +4,34 @@ import React from "react";
 import Link from "./navbar/link";
 import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
+// import { usePathname } from "next/navigation";
 
 export default function navbar() {
   const menus = [
     {
       name: "Dashboard",
       icon: "akar-icons:dashboard",
-      href: "/dashboard",
+      href: "/member",
     },
     {
       name: "Informasi Terbaru",
       icon: "material-symbols:info-outline",
-      href: "/dashboard/informasi",
+      href: "/member/informasi",
     },
     {
       name: "Kelas Saya",
       icon: "bi:display",
-      href: "/dashboard/kelas",
+      href: "/member/kelas",
     },
     {
       name: "Source Code",
       icon: "akar-icons:briefcase",
-      href: "/dashboard/source-code",
+      href: "/member/source-code",
     },
     {
       name: "Transaksi",
       icon: "akar-icons:basket",
-      href: "/dashboard/transaksi",
+      href: "/member/transaksi",
     },
   ];
 
@@ -52,9 +53,16 @@ export default function navbar() {
           <div className="menu mt-6">
             <ul className="flex gap-10">
               {menus.map((item, index) => (
-                <li className="menu-item active" key={index}>
+                <li
+                  className="menu-item active"
+                  key={index}
+                >
                   <Link
-                    // className={isActive ? "text-primary" : "text-gray-500"}
+                    // className={
+                    //   router.pathname === item.href
+                    //     ? "text-primary"
+                    //     : "text-gray-500"
+                    // }
                     href={item.href}
                     name={item.name}
                     icon={item.icon}
@@ -65,7 +73,10 @@ export default function navbar() {
           </div>
         </div>
         <div className="profile flex pr-5 gap-5  max-w-[300px]">
-          <Icon className="mt-5 text-2xl" icon="akar-icons:bell" />
+          <Icon
+            className="mt-5 text-2xl"
+            icon="akar-icons:bell"
+          />
           <img
             src={img + "kelas/avatar.png"}
             alt="avatar"

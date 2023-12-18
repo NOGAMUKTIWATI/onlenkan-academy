@@ -1,7 +1,8 @@
 "use client";
+
 import Navbar from "./_components/navbar";
 
-export default function DashboardLayout({ children }) {
+export default function Adminlayout({ children }) {
   return (
     <div>
       <Navbar />

@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "../admin/_components/navbar/link";
-import { useRouter } from "next/router";
+import Link from "./navbar/link";
+// import { useRouter } from "next/router";
 import { Icon } from "@iconify/react";
 
 export default function navbar() {
@@ -10,27 +10,27 @@ export default function navbar() {
     {
       name: "Dashboard",
       icon: "akar-icons:dashboard",
-      href: "/dashboard",
+      href: "/admin",
     },
     {
       name: "Informasi Terbaru",
       icon: "material-symbols:info-outline",
-      href: "/dashboard/informasi",
+      href: "/admin/informasi",
     },
     {
       name: "Kelas Saya",
       icon: "bi:display",
-      href: "/dashboard/kelas",
+      href: "/admin/kelas",
     },
     {
       name: "Source Code",
       icon: "akar-icons:briefcase",
-      href: "/dashboard/source-code",
+      href: "/admin/source-code",
     },
     {
       name: "Transaksi",
       icon: "akar-icons:basket",
-      href: "/dashboard/transaksi",
+      href: "/admin/transaksi",
     },
   ];
 
@@ -52,7 +52,10 @@ export default function navbar() {
           <div className="menu mt-6">
             <ul className="flex gap-10">
               {menus.map((item, index) => (
-                <li className="menu-item active" key={index}>
+                <li
+                  className="menu-item active"
+                  key={index}
+                >
                   <Link
                     // className={isActive ? "text-primary" : "text-gray-500"}
                     href={item.href}
@@ -65,7 +68,10 @@ export default function navbar() {
           </div>
         </div>
         <div className="profile flex pr-5 gap-5  max-w-[300px]">
-          <Icon className="mt-5 text-2xl" icon="akar-icons:bell" />
+          <Icon
+            className="mt-5 text-2xl"
+            icon="akar-icons:bell"
+          />
           <img
             src={img + "kelas/avatar.png"}
             alt="avatar"

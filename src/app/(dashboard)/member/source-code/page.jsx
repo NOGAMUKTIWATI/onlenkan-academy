@@ -42,7 +42,10 @@ export default function page() {
 
   return (
     <div>
-      <TableSource thead={["#", "Source Code", "Harga"]} td={table} />
+      <TableSource
+        thead={["#", "Source Code", "Harga"]}
+        td={table}
+      />
     </div>
   );
 }

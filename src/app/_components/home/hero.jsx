@@ -11,7 +11,7 @@ export default function Hero() {
         Bersama Programmer Hebat Lainnya.
       </p>
       <div className="space-x-4">
-        <Link href="/dashboard">
+        <Link href="/member">
           <button className="btn btn-primary">Dashboard Saya</button>
         </Link>
         <button className="btn-secondary">Lihat List Kelas</button>
