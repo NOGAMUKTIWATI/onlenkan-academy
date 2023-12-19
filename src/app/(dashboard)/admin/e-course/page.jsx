@@ -61,7 +61,7 @@ export default function page() {
   };
 
   return (
-    <div className="p-5 h-screen">
+    <div className="h-screen">
       <h2 className="font-bold text-start text-2xl py-5">Manajemen Ecourse</h2>
       <p className="mt-5 font-bold text-start text-gray-500 text-sm uppercase">
         Manajemen Ecourse Onlenkan Academy
@@ -81,7 +81,7 @@ export default function page() {
         </button>
       </div>
       <div className="flex gap-5">
-        <div className="sidebar w-[200px] flex-none">
+        <div className="sidebar w-[200px] p-2 space-y-3 bg-white h-screen flex-none">
           <button className="bg-primary w-full text-left text-white px-5 py-2 rounded-md">
             Course
           </button>
