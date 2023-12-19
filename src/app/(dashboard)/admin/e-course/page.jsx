@@ -2,8 +2,6 @@
 import { Icon } from "@iconify/react";
 import TableCourse from "../_components/table/course";
 import { useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
 export default function page() {
   const tabel = [
     {
@@ -61,48 +59,75 @@ export default function page() {
   };
 
   return (
-    <div className="h-screen">
-      <h2 className="font-bold text-start text-2xl py-5">Manajemen Ecourse</h2>
-      <p className="mt-5 font-bold text-start text-gray-500 text-sm uppercase">
-        Manajemen Ecourse Onlenkan Academy
-      </p>
-      <div className="flex">
-        <button className="">
-          <Icon icon="material-symbols:add" />
-          Buat Baru
-        </button>
-        <button className="px-5 ">
-          <Icon icon="" />
-          Kategori
-        </button>
-        <button className="">
-          <Icon icon="" />
-          Instructor
-        </button>
-      </div>
-      <div className="flex gap-5">
-        <div className="sidebar w-[200px] p-2 space-y-3 bg-white h-screen flex-none">
-          <button className="bg-primary w-full text-left text-white px-5 py-2 rounded-md">
-            Course
+    <div className="p-5">
+      <div className="space-y-4 mb-14 mt-14">
+        <h2 className="font-bold text-start text-2xl ">Manajemen Ecourse</h2>
+        <p className="mt-5 font-bold text-start text-gray-500 text-sm uppercase">
+          Manajemen Ecourse Onlenkan Academy
+        </p>
+
+        <div className="flex gap-3 ">
+          <button className="px-5 py-2 flex gap-3 bg-primary text-white rounded-md">
+            <Icon
+              icon="material-symbols:add"
+              className="mt-1"
+            />
+            Buat Baru
           </button>
-          <button className="bg-gray-100 w-full text-left text-black px-5 py-2 rounded-md">
-            Course
+          <button className="px-5 py-2 flex gap-3 bg-detail text-white rounded-md">
+            <Icon icon="" />
+            Kategori
+          </button>
+          <button className="bg-green-700 px-5 py-2 flex gap-3 text-white rounded-md  ">
+            <Icon icon="" />
+            Instructor
           </button>
         </div>
-        <div className="page">
-          <div className="ecourse p-3">
-            <TableCourse
-              thead={[
-                "#",
-                "Informasi E-Course",
-                "Harga Beli",
-                "Jumlah Member",
-                "Action",
-              ]}
-              td={tabel}
-            />
+      </div>
+      <div className="mt-8 space-y-1">
+        <h2 className="font-bold ml-5">Menu</h2>
+        <div className="flex gap-5">
+          <div className="sidebar  p-5 space-y-1  h-screen flex-none">
+            <button
+              onClick={() => handleTabClick(0)}
+              className={`${
+                activeTab === 0
+                  ? "bg-primary text-white"
+                  : "bg-white text-black"
+              }  w-full text-left  px-5 py-2 rounded-md`}
+            >
+              Course
+            </button>
+            <button
+              onClick={() => handleTabClick(1)}
+              className={`${
+                activeTab === 1
+                  ? "bg-primary text-white"
+                  : "bg-white text-balck"
+              } border w-full text-left  px-5 py-2 rounded-md`}
+            >
+              Detail Course
+            </button>
           </div>
-          <div className="ecourse-detail">Kosong.</div>
+          <div className="page">
+            {activeTab === 0 && (
+              <div className="ecourse p-3">
+                <TableCourse
+                  thead={[
+                    "#",
+                    "Informasi E-Course",
+                    "Harga Beli",
+                    "Jumlah Member",
+                    "Action",
+                  ]}
+                  td={tabel}
+                />
+              </div>
+            )}
+            {activeTab === 1 && (
+              <div className="ecourse-detail">Detail Kosong.</div>
+            )}
+          </div>
         </div>
       </div>
     </div>
