@@ -37,6 +37,9 @@
   .table td {
     @apply p-2;
   }
+  .ck-editor__editable {
+    @apply h-[500px];
+  }
 }
 
 /* buat warna saat text yang di blok */

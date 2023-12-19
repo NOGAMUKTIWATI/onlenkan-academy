@@ -1,7 +1,11 @@
 "use client";
+
 import { Icon } from "@iconify/react";
 import TableCourse from "../_components/table/course";
-import { useState } from "react";
+import ModalForm from "../_components/modal/form";
+import { useState, Component } from "react";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 export default function page() {
   const tabel = [
     {
@@ -52,22 +56,122 @@ export default function page() {
     },
   ];
 
+  const [modal, setModal] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (tabIndex) => {
     setActiveTab(tabIndex);
   };
 
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
   return (
     <div className="p-5">
+      <ModalForm
+        isVisible={modal}
+        onClose={() => setModal(false)}
+      >
+        <div className="font-bold text-2xl">Buat Baru</div>
+        <div className="mt-5 space-y-5">
+          <div className="grid grid-cols-2 gap-5">
+            <div className="input-box space-y-4">
+              <label htmlFor="">Kategori</label>
+              <input
+                type="text"
+                className="px-5 py-2 border outline-none rounded w-full"
+              />
+            </div>
+            <div className="input-box space-y-4">
+              <label htmlFor="">
+                Judul Courses <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                className="px-5 py-2 border outline-none rounded w-full"
+              />
+            </div>
+            <div className="input-box space-y-4">
+              <label htmlFor="">
+                Harga E-Course<span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                className="px-5 py-2 border outline-none rounded w-full"
+              />
+            </div>
+            <div className="input-box space-y-4">
+              <label htmlFor="">Harga Diskon (Jika ada)</label>
+              <input
+                type="text"
+                className="px-5 py-2 border outline-none rounded w-full"
+              />
+            </div>
+          </div>
+          <div className="">
+            <CKEditor
+              editor={ClassicEditor}
+              data="Assalamulaikum Bee Sayangku"
+              onReady={(editor) => {
+                editor.ui.view.editable.element.style.minHeight = "300px";
+              }}
+              onChange={(event) => {
+                console.log(event);
+              }}
+              onBlur={(event, editor) => {
+                console.log("Blur.", editor);
+              }}
+              onFocus={(event, editor) => {
+                console.log("Focus.", editor);
+              }}
+            />
+          </div>
+          <div className="grid grid-cols-2 gap-5">
+            <div className="input-box space-y-4">
+              <label htmlFor="">Gambar Utama</label>
+              <input
+                type="file"
+                className="px-5 py-2 border outline-none rounded w-full"
+              />
+            </div>
+            <div className="input-box space-y-4">
+              <label htmlFor="">Pilih Mentor</label>
+              <input
+                type="text"
+                className="px-5 py-2 border outline-none rounded w-full"
+                value="Noga Muktiwati"
+              />
+            </div>
+          </div>
+          <div className="input-box space-y-4">
+            <label htmlFor="">Link Group</label>
+            <input
+              type="text"
+              className="px-5 py-2 border outline-none rounded w-full"
+              value="Noga Muktiwati"
+            />
+          </div>
+          <button className="px-5 py-2 bg-primary flex gap-5 text-white rounded-md">
+            <Icon
+              icon={"ic:baseline-save"}
+              className="text-lg mt-1"
+            />
+            Simpan
+          </button>
+        </div>
+      </ModalForm>
       <div className="space-y-4 mb-14 mt-14">
         <h2 className="font-bold text-start text-2xl ">Manajemen Ecourse</h2>
-        <p className="mt-5 font-bold text-start text-gray-500 text-sm uppercase">
+        <p className="mt-5 font-bold text-start text- gray-500 text-sm uppercase">
           Manajemen Ecourse Onlenkan Academy
         </p>
 
         <div className="flex gap-3 ">
-          <button className="px-5 py-2 flex gap-3 bg-primary text-white rounded-md">
+          <button
+            className="px-5 py-2 flex gap-3 bg-primary text-white rounded-md"
+            onClick={toggleModal}
+          >
             <Icon
               icon="material-symbols:add"
               className="mt-1"
@@ -125,7 +229,7 @@ export default function page() {
               </div>
             )}
             {activeTab === 1 && (
-              <div className="ecourse-detail">Detail Kosong.</div>
+              <div className="ecourse-detail">Detail Masih Kosong bee.</div>
             )}
           </div>
         </div>

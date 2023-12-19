@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.2.0",
+    "@ckeditor/ckeditor5-react": "^6.2.0",
+    "@tinymce/tinymce-react": "^4.3.2",
     "akar-icons": "^1.9.30",
     "next": "14.0.3",
     "react": "^18",
