@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 export default function dashboard({ thead, td }) {
   return (
     <div className="p-1 w-full rounded-md">
-      <div className="grid bg-white p-5 grid-cols-5  w-full text-center">
+      <div className="grid bg-white p-5 grid-cols-5 border w-full text-center">
         {thead.map((item, index) => (
           <h2 key={index}>{item}</h2>
         ))}
@@ -12,7 +12,7 @@ export default function dashboard({ thead, td }) {
         <div className="w-full space-y-5">
           {td.map((item, i) => (
             <div
-              className="bg-white rounded-md grid p-3 gap-5 grid-cols-5 justify-start text-left"
+              className="bg-white border rounded-md grid p-3 gap-5 grid-cols-5 justify-start text-left"
               key={i}
             >
               <div className="w-full space-y-4">

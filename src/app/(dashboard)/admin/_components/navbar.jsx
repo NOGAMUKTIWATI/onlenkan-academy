@@ -13,9 +13,9 @@ export default function navbar() {
       href: "/admin",
     },
     {
-      name: "Informasi Terbaru",
+      name: "E-Course",
       icon: "material-symbols:info-outline",
-      href: "/admin/informasi",
+      href: "/admin/e-course",
     },
     {
       name: "Kelas Saya",

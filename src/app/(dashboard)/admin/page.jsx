@@ -34,8 +34,8 @@ export default function page() {
     {
       tanggal: "7 Agustus 2024",
       informasi: {
-        name: "Mohammad Sahrullah",
-        email: "mohammadsahrullah894@gmail.com",
+        name: "Muhammad Yunus",
+        email: "muhammadyunus@gmail.com",
         nomor: "6281336210025",
       },
       harga: "Rp. 1.000.000",

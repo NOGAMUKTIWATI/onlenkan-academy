@@ -5,7 +5,7 @@ export default function page() {
   const table = [
     {
       no: 1,
-      image: "../images/kelas/card-1.jpg",
+      image: "../../images/kelas/card-1.jpg",
       title: "Blog App PHP MySQL - Kelas Full-Stack Developer",
       subtitle: "PHP MySQL",
       harga: "Rp. 150,000",
@@ -42,10 +42,7 @@ export default function page() {
 
   return (
     <div>
-      <TableSource
-        thead={["#", "Source Code", "Harga"]}
-        td={table}
-      />
+      <TableSource thead={["#", "Source Code", "Harga"]} td={table} />
     </div>
   );
 }

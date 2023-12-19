@@ -28,7 +28,7 @@ export default function page() {
   return (
     <div className="kelas lg:h-screen p-5">
       <div className="p-2">
-        <h2 className="font-semibold text-start text-2xl py-5">Kelas Sayang</h2>
+        <h2 className="font-semibold text-start text-2xl py-5">Kelas Saya</h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 py-5">
         {items.map((item, index) => (
