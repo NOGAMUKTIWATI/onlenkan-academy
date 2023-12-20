@@ -69,10 +69,7 @@ export default function page() {
 
   return (
     <div className="p-5">
-      <ModalForm
-        isVisible={modal}
-        onClose={() => setModal(false)}
-      >
+      <ModalForm isVisible={modal} onClose={() => setModal(false)}>
         <div className="font-bold text-2xl">Buat Baru</div>
         <div className="mt-5 space-y-5">
           <div className="grid grid-cols-2 gap-5">
@@ -112,7 +109,7 @@ export default function page() {
           <div className="">
             <CKEditor
               editor={ClassicEditor}
-              data="Assalamulaikum Bee Sayangku"
+              data=""
               onReady={(editor) => {
                 editor.ui.view.editable.element.style.minHeight = "300px";
               }}
@@ -153,17 +150,14 @@ export default function page() {
             />
           </div>
           <button className="px-5 py-2 bg-primary flex gap-5 text-white rounded-md">
-            <Icon
-              icon={"ic:baseline-save"}
-              className="text-lg mt-1"
-            />
+            <Icon icon={"ic:baseline-save"} className="text-lg mt-1" />
             Simpan
           </button>
         </div>
       </ModalForm>
       <div className="space-y-4 mb-14 mt-14">
         <h2 className="font-bold text-start text-2xl ">Manajemen Ecourse</h2>
-        <p className="mt-5 font-bold text-start text- gray-500 text-sm uppercase">
+        <p className="mt-5 font-md text-start text-gray-400 text-sm uppercase">
           Manajemen Ecourse Onlenkan Academy
         </p>
 
@@ -172,10 +166,7 @@ export default function page() {
             className="px-5 py-2 flex gap-3 bg-primary text-white rounded-md"
             onClick={toggleModal}
           >
-            <Icon
-              icon="material-symbols:add"
-              className="mt-1"
-            />
+            <Icon icon="material-symbols:add" className="mt-1" />
             Buat Baru
           </button>
           <button className="px-5 py-2 flex gap-3 bg-detail text-white rounded-md">
@@ -189,7 +180,6 @@ export default function page() {
         </div>
       </div>
       <div className="mt-8 space-y-1">
-        <h2 className="font-bold ml-5">Menu</h2>
         <div className="flex gap-5">
           <div className="sidebar  p-5 space-y-1  h-screen flex-none">
             <button
@@ -228,9 +218,7 @@ export default function page() {
                 />
               </div>
             )}
-            {activeTab === 1 && (
-              <div className="ecourse-detail">Detail Masih Kosong bee.</div>
-            )}
+            {activeTab === 1 && <div className="ecourse-detail">Detail</div>}
           </div>
         </div>
       </div>

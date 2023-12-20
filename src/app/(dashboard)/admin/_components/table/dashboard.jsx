@@ -9,7 +9,7 @@ export default function dashboard({ thead, td }) {
         ))}
       </div>
       <div className="w-full mt-5">
-        <div className="w-full space-y-5">
+        <div className="w-full space-y-4">
           {td.map((item, i) => (
             <div
               className="bg-white border rounded-md grid p-3 gap-5 grid-cols-5 justify-start text-left"
@@ -20,7 +20,7 @@ export default function dashboard({ thead, td }) {
                   {item.tanggal}
                 </h2>
               </div>
-              <div className="w-full space-y-2">
+              <div className="w-full space-y-4">
                 <p>{item.informasi.name}</p>
                 <p className="text-primary">{item.informasi.email}</p>
                 <p className="text-primary">{item.informasi.nomor}</p>

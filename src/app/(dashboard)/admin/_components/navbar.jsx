@@ -14,24 +14,11 @@ export default function navbar() {
     },
     {
       name: "E-Course",
-      icon: "material-symbols:info-outline",
+      icon: "bi:display",
       href: "/admin/e-course",
     },
-    {
-      name: "Kelas Saya",
-      icon: "bi:display",
-      href: "/admin/kelas",
-    },
-    {
-      name: "Source Code",
-      icon: "akar-icons:briefcase",
-      href: "/admin/source-code",
-    },
-    {
-      name: "Transaksi",
-      icon: "akar-icons:basket",
-      href: "/admin/transaksi",
-    },
+   
+   
   ];
 
   const img = "../images/";

@@ -4,10 +4,7 @@ export default function course({ thead, td }) {
     <div className=" w-full rounded-md">
       <div className="grid bg-white p-5 grid-cols-5 w-full text-center">
         {thead.map((item, index) => (
-          <h2
-            className="font-bold"
-            key={index}
-          >
+          <h2 className="font-bold" key={index}>
             {item}
           </h2>
         ))}
@@ -21,11 +18,7 @@ export default function course({ thead, td }) {
             >
               {/* # */}
               <div className="text-center flex justify-center">
-                <img
-                  src={item.image}
-                  className="w-52 rounded-md"
-                  alt=""
-                />
+                <img src={item.image} className="w-52 rounded-md" alt="" />
               </div>
               {/* <img src={item.image} className="w-52" alt={item.title} /> */}
               {/* Informasi E-Course */}
@@ -58,7 +51,7 @@ export default function course({ thead, td }) {
                   </button>
                 </div>
                 <div>
-                  <button className="flex gap-2 bg-red-500 px-5 py-2 rounded-md text-white">
+                  <button className="flex gap-2 bg-red-500 text-white px-5 py-2 rounded-md mr-8">
                     <Icon icon="mdi:trash-outline" />
                     Hapus
                   </button>

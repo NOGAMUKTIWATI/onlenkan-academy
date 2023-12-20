@@ -77,7 +77,6 @@ export default function page() {
               "Tanggal Bergabung",
               "Informasi Personal",
               "Harga Beli",
-              ,
               "Video Terakhir",
               "Status",
             ]}
