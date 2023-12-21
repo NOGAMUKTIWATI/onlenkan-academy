@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import TableCourse from "../_components/table/course";
+import TableInstructor from "../_components/table/instructor";
 import ModalForm from "../_components/modal/form";
 import { useState, Component } from "react";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
@@ -61,6 +62,35 @@ export default function page() {
     },
   ];
 
+  const instructor = [
+    {
+      avatar: "../images/kelas/noga.png",
+      personal: {
+        nama: "Noga Muktiwati",
+        email: "nogamuktiwati@gmail.com",
+        nomor: "01301730173",
+      },
+      asal: {
+        title: "Onlenkan",
+        subtitle: "Full-Stack Web Developer",
+      },
+      ecourse: "20 Courses",
+    },
+    {
+      avatar: "../images/kelas/avatar.png",
+      personal: {
+        nama: "Muhammad Yunus",
+        email: "muhammadyunus@gmail.com",
+        nomor: "01301730173",
+      },
+      asal: {
+        title: "Onlenkan",
+        subtitle: "Full-Stack Web Developer",
+      },
+      ecourse: "20 Courses",
+    },
+  ];
+
   const [modal, setModal] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
 
@@ -74,8 +104,10 @@ export default function page() {
 
   return (
     <div className="p-5">
-
-      <ModalForm isVisible={modal} onClose={() => setModal(false)}>
+      <ModalForm
+        isVisible={modal}
+        onClose={() => setModal(false)}
+      >
         <div className="font-bold text-2xl">Buat Baru</div>
         <div className="mt-5 space-y-5">
           <div className="grid grid-cols-2 gap-5">
@@ -156,7 +188,10 @@ export default function page() {
             />
           </div>
           <button className="px-5 py-2 bg-primary flex gap-5 text-white rounded-md">
-            <Icon icon={"ic:baseline-save"} className="text-lg mt-1" />
+            <Icon
+              icon={"ic:baseline-save"}
+              className="text-lg mt-1"
+            />
             Simpan
           </button>
         </div>
@@ -172,7 +207,10 @@ export default function page() {
             className="px-5 py-2 flex gap-3 bg-primary text-white rounded-md"
             onClick={toggleModal}
           >
-            <Icon icon="material-symbols:add" className="mt-1" />
+            <Icon
+              icon="material-symbols:add"
+              className="mt-1"
+            />
             Buat Baru
           </button>
           <button className="px-5 py-2 flex gap-3 bg-detail text-white rounded-md">
@@ -224,7 +262,20 @@ export default function page() {
                 />
               </div>
             )}
-            {activeTab === 1 && <div className="ecourse-detail">Detail</div>}
+            {activeTab === 1 && (
+              <div className="p-3">
+                <TableInstructor
+                  thead={[
+                    "#",
+                    "Personal Data",
+                    "Asal",
+                    "Ecourse",
+                    "Social Media",
+                  ]}
+                  td={instructor}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>

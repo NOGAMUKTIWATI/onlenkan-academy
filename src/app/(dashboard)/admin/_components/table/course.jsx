@@ -8,8 +8,11 @@ export default function course({ thead, td }) {
     <div className=" w-full rounded-md">
       <div className="grid bg-white p-5 grid-cols-5 w-full">
         {thead.map((item, index) => (
-          <div className={item === "Action" ? "text-center" : "text-left"}>
-            <h2 key={index}>{item}</h2>
+          <div
+            key={index}
+            className={item === "Action" ? "text-center" : "text-left"}
+          >
+            <h2>{item}</h2>
           </div>
         ))}
       </div>
@@ -22,7 +25,11 @@ export default function course({ thead, td }) {
             >
               {/* # */}
               <div className="text-left flex justify-center">
-                <img src={item.image} className="w-52 rounded-md" alt="" />
+                <img
+                  src={item.image}
+                  className="w-52 rounded-md"
+                  alt=""
+                />
               </div>
               {/* <img src={item.image} className="w-52" alt={item.title} /> */}
               {/* Informasi E-Course */}
