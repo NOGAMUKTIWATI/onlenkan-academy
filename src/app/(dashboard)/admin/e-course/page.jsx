@@ -17,6 +17,7 @@ export default function page() {
       price: "Rp. 240,000",
       discount: "Rp. 350,000",
       member: "58 Member",
+      slug: "fullstack-web-developer-belajar-dari-0-hingga-mahir",
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ export default function page() {
       price: "Rp. 210,000",
       discount: "Rp. 300,000",
       member: "7 Member",
+      slug: "mastering-laravel-from-zero-to-hero",
     },
     {
       id: 3,
@@ -35,6 +37,7 @@ export default function page() {
       price: "Rp. 400,000",
       discount: "Rp. 650,000",
       member: "2 Member",
+      slug: "bundling-package-full-stack-developer-mastering-laravel",
     },
     {
       id: 3,
@@ -44,6 +47,7 @@ export default function page() {
       price: "Rp. 120,000",
       discount: "Rp. 280,000",
       member: "4 Member",
+      slug: "mastering-html-css",
     },
     {
       id: 4,
@@ -53,6 +57,7 @@ export default function page() {
       price: "Rp. 120,000",
       discount: "Rp. 300,000",
       member: "0 Member",
+      slug: "kelas-javascript-dasar-untuk-pemula",
     },
   ];
 
@@ -180,8 +185,8 @@ export default function page() {
         </div>
       </div>
       <div className="mt-8 space-y-1">
-        <div className="flex gap-5">
-          <div className="sidebar  p-5 space-y-1  h-screen flex-none">
+        <div className="flex gap-2">
+          <div className="sidebar p-5 space-y-1  h-screen flex-none">
             <button
               onClick={() => handleTabClick(0)}
               className={`${

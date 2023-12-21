@@ -17,8 +17,6 @@ export default function navbar() {
       icon: "bi:display",
       href: "/admin/e-course",
     },
-   
-   
   ];
 
   const img = "../images/";
@@ -39,10 +37,7 @@ export default function navbar() {
           <div className="menu mt-6">
             <ul className="flex gap-10">
               {menus.map((item, index) => (
-                <li
-                  className="menu-item active"
-                  key={index}
-                >
+                <li className="menu-item active" key={index}>
                   <Link
                     // className={isActive ? "text-primary" : "text-gray-500"}
                     href={item.href}
@@ -55,10 +50,7 @@ export default function navbar() {
           </div>
         </div>
         <div className="profile flex pr-5 gap-5  max-w-[300px]">
-          <Icon
-            className="mt-5 text-2xl"
-            icon="akar-icons:bell"
-          />
+          <Icon className="mt-5 text-2xl" icon="akar-icons:bell" />
           <img
             src={img + "kelas/avatar.png"}
             alt="avatar"

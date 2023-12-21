@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react";
 export default function dashboard({ thead, td }) {
   return (
     <div className="p-1 w-full rounded-md">
-      <div className="grid bg-white p-5 grid-cols-5 border w-full text-center">
+      <div className="grid bg-white p-5 grid-cols-5 border w-full text-left">
         {thead.map((item, index) => (
           <h2 key={index}>{item}</h2>
         ))}
@@ -16,7 +16,7 @@ export default function dashboard({ thead, td }) {
               key={i}
             >
               <div className="w-full space-y-4">
-                <h2 className="text-center mt-7 font-medium text-black">
+                <h2 className="text-left mt-7 font-medium text-black">
                   {item.tanggal}
                 </h2>
               </div>
@@ -25,7 +25,7 @@ export default function dashboard({ thead, td }) {
                 <p className="text-primary">{item.informasi.email}</p>
                 <p className="text-primary">{item.informasi.nomor}</p>
               </div>
-              <div className="w-full flex justify-center text-center mt-8 ">
+              <div className="w-full flex justify-start text-left mt-8 ">
                 <div>
                   <p>{item.harga}</p>
                   <button className="px-5 py-2 text-white bg-detail rounded-md flex gap-2">
@@ -34,9 +34,9 @@ export default function dashboard({ thead, td }) {
                   </button>
                 </div>
               </div>
-              <div className="mt-7 text-center">{item.videoTerakhir}</div>
+              <div className="mt-7 text-left">{item.videoTerakhir}</div>
               <div className=" gap-2">
-                <div className="flex gap-2 mt-7 max-w-[200px]">
+                <div className="flex gap-2 mt-7 -ml-5">
                   <select
                     name=""
                     className="w-full px-5 py-2 bg-gray-100"
