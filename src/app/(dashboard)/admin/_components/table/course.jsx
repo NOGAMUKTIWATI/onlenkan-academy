@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import Link from "next/link";
+import Link from "../course/link";
 
 export default function course({ thead, td }) {
   return (
@@ -27,14 +27,11 @@ export default function course({ thead, td }) {
               {/* <img src={item.image} className="w-52" alt={item.title} /> */}
               {/* Informasi E-Course */}
               <div className="space-y-4">
-                <link
+                <Link
                   href={"/admin/e-course/" + item.slug}
-                  className={"text-left"}
-                >
-                  <h2 className="text-lg text-primary hover:text-blue-800 font-semibold">
-                    {item.title}
-                  </h2>
-                </link>
+                  // className={"text-left"}
+                  name={item.title}
+                />
                 <h4 className="font-medium text-sm capitalize text-gray-500">
                   {item.subtitle}
                 </h4>
