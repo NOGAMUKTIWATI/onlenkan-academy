@@ -74,6 +74,7 @@ export default function page() {
 
   return (
     <div className="p-5">
+
       <ModalForm isVisible={modal} onClose={() => setModal(false)}>
         <div className="font-bold text-2xl">Buat Baru</div>
         <div className="mt-5 space-y-5">
@@ -205,7 +206,7 @@ export default function page() {
                   : "bg-white text-balck"
               } border w-full text-left  px-5 py-2 rounded-md`}
             >
-              Detail Course
+              Instructor
             </button>
           </div>
           <div className="page">

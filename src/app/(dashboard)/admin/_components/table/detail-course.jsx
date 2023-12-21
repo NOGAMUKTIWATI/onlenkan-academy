@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 
-export default function dashboard({ thead, td }) {
+export default function DetailCourse({ thead, td }) {
   return (
     <div className="p-1 w-full rounded-md">
       <div className="grid bg-white p-5 grid-cols-5 border w-full text-left">
@@ -21,17 +21,26 @@ export default function dashboard({ thead, td }) {
                 </h2>
               </div>
               <div className="w-full space-y-4">
-                <p>{item.informasi.name}</p>
+                <p className="text-black font-bold">{item.informasi.nama}</p>
                 <p className="text-primary">{item.informasi.email}</p>
                 <p className="text-primary">{item.informasi.nomor}</p>
               </div>
               <div className="w-full flex justify-start text-left mt-8 ">
                 <div>
                   <p>{item.harga}</p>
-                  <button className="px-5 py-2 text-white bg-detail rounded-md flex gap-2">
-                    <Icon icon="ri:information-line" className="mt-1" />
-                    <p>Cek Payment</p>
-                  </button>
+                  {/* logic Promo */}
+                  {item.promo && (
+                    <button className="px-5 py-2 bg-primary/5 rounded-md">
+                      <p className="text-primary">ONLENKAN50</p>
+                    </button>
+                  )}
+                  {/* logic Payment */}
+                  {item.payment && (
+                    <button className="px-5 py-2 text-white bg-detail rounded-md flex gap-2">
+                      <Icon icon="ri:information-line" className="mt-1" />
+                      <p>Cek Payment</p>
+                    </button>
+                  )}
                 </div>
               </div>
               <div className="mt-7 text-left">{item.videoTerakhir}</div>
